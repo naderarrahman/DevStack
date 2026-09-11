@@ -3,11 +3,17 @@ import type { Technology } from "../types/technologies";
 // Props Type Definition
 interface TechCardProps {
   tech: Technology;
+  isSelected: boolean;
+  onSelect: () => void;
 }
 
-export default function TechCard({ tech }: TechCardProps) {
+export default function TechCard({
+  tech,
+  isSelected,
+  onSelect,
+}: TechCardProps) {
   return (
-      <article className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between h-full">
+    <article className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between h-full">
       <div>
         {/* Top Header: Icon & Brand Accent Badge */}
         <div className="flex items-center justify-between mb-4">
@@ -22,9 +28,7 @@ export default function TechCard({ tech }: TechCardProps) {
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
-          {tech.name}
-        </h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>
 
         {/* Description */}
         <p className="text-sm text-gray-500 mb-6 leading-relaxed line-clamp-3">
@@ -48,11 +52,17 @@ export default function TechCard({ tech }: TechCardProps) {
         {/* Brand Theme Gradient Button */}
         <button
           type="button"
-          className="w-full py-3 px-4 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 hover:opacity-95 active:scale-[0.99] transition-all duration-150 shadow-sm"
+          onClick={onSelect}
+          disabled={isSelected}
+          className={`w-full py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-150 shadow-sm ${
+            isSelected
+              ? "bg-gray-900 text-white cursor-not-allowed opacity-90"
+              : "text-white bg-linear-to-r from-orange-500 via-pink-500 to-violet-600 hover:opacity-95 active:scale-[0.99]"
+          }`}
         >
-          Add to Stack
+          {isSelected ? "Selected" : "Add to Stack"}
         </button>
       </div>
     </article>
-  )
+  );
 }
