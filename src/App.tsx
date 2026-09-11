@@ -1,5 +1,17 @@
+import { Suspense } from "react";
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import TechGrid from "./components/TechGrid";
+
+//creating Promise
+const fetchData = async()=>{
+  const response = await fetch('/technologies.json');
+  const data = await response.json();
+  return data;
+}
+
+const dataPromise = fetchData();
+
 
 function App() {
   
@@ -8,6 +20,9 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Suspense fallback={<div>Loading...</div>}>
+        <TechGrid dataPromise={dataPromise} />
+      </Suspense>
     </>
   )
 }
