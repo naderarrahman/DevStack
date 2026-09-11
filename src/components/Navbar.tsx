@@ -27,11 +27,11 @@ export default function Navbar() {
 
         <img src={logo} alt="Logo" className="h-8 w-auto object-contain"/>
         <ul className="hidden lg:flex items-center gap-8 font-medium text-gray-600 text-sm">
-          <a href="#home" className="hover:text-gray-900 transition">Home</a>
-          <li>Technologies</li>
-          <li>Projects</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="#home" className="hover:text-gray-900 transition">Home</a></li>
+          <li><a href="#technologies" className="hover:text-gray-900 transition">Technologies</a></li>
+          <li><a href="#projects" className="hover:text-gray-900 transition">Projects</a></li>
+          <li><a href="#about" className="hover:text-gray-900 transition">About</a></li>
+          <li><a href="#contact" className="hover:text-gray-900 transition">Contact</a></li>
         </ul>
         <div className="flex items-center gap-3">
           <button className="text-sm font-semibold text-gray-700 hover:text-gray-900 px-3 py-2 transition">Sign In</button>

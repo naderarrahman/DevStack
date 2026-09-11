@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
@@ -6,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-12 pb-12">
           <div className="max-w-sm">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg `bg-linear-to-tr` from-orange-500 via-pink-500 to-violet-600 flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-8 h-8 rounded-lg bg-linear-to-tr from-orange-500 via-pink-500 to-violet-600 flex items-center justify-center text-white font-bold text-xs">
                 DS
               </div>
               <h2 className="text-xl font-bold text-gray-900">

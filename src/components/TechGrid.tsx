@@ -14,24 +14,14 @@ export default function TechGrid({ dataPromise }: TechGridProps) {
 
   const [selectedTechs, setSelectedTechs] = useState<Technology[]>([]);
   const handleSelectTech = (tech: Technology) => {
-    const existingTech = selectedTechs.find(
-      (t) => t.category === tech.category,
-    );
+    const isAlreadySelected = selectedTechs.some((t) => t.id === tech.id);
 
-    setSelectedTechs((prevSelectedTechs) => {
-      const filtered = prevSelectedTechs.filter(
-        (t) => t.category !== tech.category,
-      );
-      return [...filtered, tech];
-    });
-
-    if (existingTech && existingTech.id !== tech.id) {
-      toast.info(
-        `Replaced ${existingTech.name} with ${tech.name} in ${tech.category}!`,
-      );
-    } else {
-      toast.success(`${tech.name} added to your stack!`);
+    if (isAlreadySelected) {
+      toast.warning(`${tech.name} is already in your stack!`);
+      return;
     }
+    setSelectedTechs((prevSelectedTechs) => [...prevSelectedTechs, tech]);
+    toast.success(`${tech.name} added to your stack!`);
   };
 
   const handleRemoveTech = (id: string) => {

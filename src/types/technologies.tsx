@@ -1,9 +1,10 @@
 export interface Technology {
   id: string;
   name: string;
-  category: "Frontend" | "Backend" | "Database" | "Styling" | "State Management" | "Tools";
   description: string;
-  icon: string;
+  category: string;
+  difficulty: string;
   rating: number;
-  experience: "Beginner" | "Intermediate" | "Advanced";
+  icon: string;
+  badge?: string; 
 }

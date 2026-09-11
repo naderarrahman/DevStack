@@ -21,9 +21,11 @@ export default function TechCard({
             alt={tech.name}
             className="w-10 h-10 object-contain"
           />
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-orange-50 text-orange-600 border border-orange-100">
-            Popular
-          </span>
+          {tech?.badge ? (
+            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-orange-50 text-orange-600 border border-orange-100">
+              {tech.badge}
+            </span>
+          ) : null}
         </div>
 
         <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>
@@ -38,7 +40,7 @@ export default function TechCard({
           <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg font-semibold">
             {tech.category}
           </span>
-          <span>{tech.experience}</span>
+          <span>{tech.difficulty}</span>
           <div className="flex items-center gap-1 font-semibold text-gray-800">
             <span className="text-amber-400">★</span>
             <span>{tech.rating}</span>
@@ -51,11 +53,11 @@ export default function TechCard({
           disabled={isSelected}
           className={`w-full py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-150 shadow-sm ${
             isSelected
-              ? "bg-gray-900 text-white cursor-not-allowed opacity-90"
+              ? "bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200"
               : "text-white bg-linear-to-r from-orange-500 via-pink-500 to-violet-600 hover:opacity-95 active:scale-[0.99]"
           }`}
         >
-          {isSelected ? "Selected" : "Add to Stack"}
+          {isSelected ? "✓ Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </article>
