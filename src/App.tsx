@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import TechGrid from "./components/TechGrid";
+import Footer from "./components/Footer";
 
 //creating Promise
 const fetchData = async()=>{
@@ -23,6 +24,7 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <TechGrid dataPromise={dataPromise} />
       </Suspense>
+      <Footer />
     </>
   )
 }
