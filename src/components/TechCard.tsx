@@ -15,7 +15,6 @@ export default function TechCard({
   return (
     <article className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between h-full">
       <div>
-        {/* Top Header: Icon & Brand Accent Badge */}
         <div className="flex items-center justify-between mb-4">
           <img
             src={tech.icon}
@@ -27,17 +26,14 @@ export default function TechCard({
           </span>
         </div>
 
-        {/* Title */}
         <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>
 
-        {/* Description */}
         <p className="text-sm text-gray-500 mb-6 leading-relaxed line-clamp-3">
           {tech.description}
         </p>
       </div>
 
       <div>
-        {/* Info Row: Category | Experience | Rating */}
         <div className="flex items-center justify-between text-xs text-gray-500 mb-5 font-medium">
           <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg font-semibold">
             {tech.category}
@@ -49,7 +45,6 @@ export default function TechCard({
           </div>
         </div>
 
-        {/* Brand Theme Gradient Button */}
         <button
           type="button"
           onClick={onSelect}
