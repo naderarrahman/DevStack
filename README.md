@@ -1,75 +1,78 @@
-# React + TypeScript + Vite
+# 🚀 DevStack - Technology Stack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![DevStack Preview](src/assets/preview.png)
 
-Currently, two official plugins are available:
+A modern, interactive, and responsive web application designed for developers to discover, organize, and manage their favorite technology stacks. Effortlessly curate your personalized toolkit from a wide range of frontend, backend, and DevOps tools.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Live Demo:** [Visit DevStack Live](https://devstack-nader.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+- **Core Library:** React.js (Powered by Vite)
+- **Language:** TypeScript / JavaScript (ES6+)
+- **Styling:** Tailwind CSS
+- **Icons & UI Elements:** Lucide React / React Icons
+- **Notifications:** React-Toastify
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Key Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- 🔍 **Interactive Tech Selection:** Browse through a rich directory of popular web, mobile, and backend technologies with clean visual indicators.
+- ⚡ **Dynamic Stack Management:** Add or remove technologies from your stack in real-time with automatic duplicate prevention and instant Toast notifications.
+- 📱 **Responsive & Modern UI:** Designed with smooth gradient styling, an optimized sticky header navigation, and full mobile responsiveness.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## 💡 React Questions & Answers
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. What is JSX, and why is it used in React?
+**Answer:** JSX (JavaScript XML) is a syntax extension for React that lets us write HTML-like code inside JavaScript. It makes writing UI components intuitive and readable, allowing dynamic JavaScript expressions to be embedded directly within markup using `{}`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. What is the difference between props and state?
+**Answer:** 
+- **Props (Properties):** Read-only data passed down from a parent component to a child component. The child cannot modify its props.
+- **State:** Internal dynamic data managed within a component that can change based on user interactions and triggers a re-render when updated.
 
-```
+---
+
+### 3. What does the `useState` hook do, and where did you use it in this project?
+**Answer:** The `useState` hook allows functional components to create, manage, and update local reactive state. In this project, it was used inside `TechGrid.tsx` to store and manage the array of selected technologies in `selectedTechs`.
+
+---
+
+### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
+**Answer:** `useEffect` handles side effects in React components, such as data fetching or DOM updates. In this project, it was used to fetch technology data from `/technologies.json` when the component first mounts, ensuring asynchronous loading after render.
+
+---
+
+### 5. Why does every item in a `.map()` list need a unique `key` prop?
+**Answer:** React uses the unique `key` prop to identify which items in a list have changed, been added, or removed. This optimizes DOM re-rendering performance and avoids state inconsistencies.
+
+---
+
+### 6. What is conditional rendering? Show one place you used it.
+**Answer:** Conditional rendering means showing or hiding UI elements based on specific logical conditions. In this project, it was used in the `StackSidebar` component to render an *"Empty Stack"* message when no technology is selected (`selectedTechs.length === 0`).
+
+---
+
+### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+**Answer:** 
+- **Parent to Child:** Data is passed down through **props** directly as attributes (e.g., `<TechCard tech={item} />`).
+- **Child to Parent:** The parent passes a **callback function** as a prop to the child, and the child executes that function with arguments to send data back up to the parent.
+
+---
+
+## 📄 License
+
+Distributed under the MIT License.
+
+---
+
+<p align="center">
+  Built with ❤️ using <b>React & Tailwind CSS</b> • © 2026 <a href="https://linkedin.com/in/naderarrahman" target="_blank">Nader Ar Rahman</a>
+</p>
