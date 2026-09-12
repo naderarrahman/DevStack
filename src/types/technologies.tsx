@@ -6,5 +6,5 @@ export interface Technology {
   difficulty: string;
   rating: number;
   icon: string;
-  badge?: string; 
+  badge: string; 
 }

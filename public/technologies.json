@@ -6,7 +6,8 @@
     "description": "A popular JavaScript library for building user interfaces with component architecture.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "rating": 4.9,
-    "experience": "Intermediate"
+    "difficulty": "Beginner-Friendly",
+    "badge": "Popular"
   },
   {
     "id": "2",
@@ -15,7 +16,8 @@
     "description": "A utility-first CSS framework packed with classes for rapid UI development.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
     "rating": 4.8,
-    "experience": "Beginner"
+    "difficulty": "Beginner-Friendly",
+    "badge": "Fast UI"
   },
   {
     "id": "3",
@@ -24,7 +26,8 @@
     "description": "JavaScript runtime built on Chrome's V8 engine for building scalable network applications.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     "rating": 4.7,
-    "experience": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Standard"
   },
   {
     "id": "4",
@@ -33,7 +36,8 @@
     "description": "A NoSQL document-based database designed for high performance and scalability.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     "rating": 4.6,
-    "experience": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "NoSQL Leader"
   },
   {
     "id": "5",
@@ -42,7 +46,8 @@
     "description": "Fast, unopinionated, minimalist web framework for Node.js backend development.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     "rating": 4.5,
-    "experience": "Beginner"
+    "difficulty": "Beginner-Friendly",
+    "badge": "Minimalist"
   },
   {
     "id": "6",
@@ -51,7 +56,8 @@
     "description": "Strongly typed programming language that builds on JavaScript, giving you better tooling.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     "rating": 4.8,
-    "experience": "Advanced"
+    "difficulty": "Advanced",
+    "badge": "Essential"
   },
   {
     "id": "7",
@@ -60,7 +66,8 @@
     "description": "The React Framework for the Web with server-side rendering and static site generation.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     "rating": 4.9,
-    "experience": "Advanced"
+    "difficulty": "Advanced",
+    "badge": "Fullstack"
   },
   {
     "id": "8",
@@ -69,16 +76,18 @@
     "description": "Powerful, open source object-relational database system with high reliability.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     "rating": 4.7,
-    "experience": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Top SQL"
   },
   {
     "id": "9",
     "name": "Redux Toolkit",
-    "category": "State Management",
+    "category": "Frontend",
     "description": "The official, opinionated, batteries-included toolset for efficient Redux development.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
     "rating": 4.4,
-    "experience": "Advanced"
+    "difficulty": "Advanced",
+    "badge": "State Mgmt"
   },
   {
     "id": "10",
@@ -87,7 +96,8 @@
     "description": "Platform developed by Google for creating mobile and web applications with real-time DB.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
     "rating": 4.6,
-    "experience": "Beginner"
+    "difficulty": "Beginner-Friendly",
+    "badge": "BaaS"
   },
   {
     "id": "11",
@@ -96,7 +106,8 @@
     "description": "Popular component library for Tailwind CSS with clean utility classes and themes.",
     "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/daisyui.svg",
     "rating": 4.5,
-    "experience": "Beginner"
+    "difficulty": "Beginner-Friendly",
+    "badge": "Component Pack"
   },
   {
     "id": "12",
@@ -105,16 +116,18 @@
     "description": "DevOps tool used for source code management and distributed version control.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     "rating": 4.9,
-    "experience": "Beginner"
+    "difficulty": "Beginner-Friendly",
+    "badge": "Must Have"
   },
   {
     "id": "13",
     "name": "Docker",
-    "category": "Tools",
+    "category": "DevOps",
     "description": "OS-level virtualization software platform to deliver software in packages called containers.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     "rating": 4.8,
-    "experience": "Advanced"
+    "difficulty": "Advanced",
+    "badge": "Containers"
   },
   {
     "id": "14",
@@ -123,7 +136,8 @@
     "description": "Query language for APIs and a runtime for fulfilling those queries with existing data.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
     "rating": 4.6,
-    "experience": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Modern API"
   },
   {
     "id": "15",
@@ -132,6 +146,7 @@
     "description": "An open-source model–view–viewmodel front end JavaScript framework for building UIs.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
     "rating": 4.7,
-    "experience": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Versatile"
   }
 ]
